@@ -25,7 +25,7 @@
   src: url(../fonts/Montserrat/Montserrat-Regular.ttf);
 }
 body {
-  background-image: linear-gradient(var(--primary-color), white, white, rgba(46, 32, 46, 0.596));
+  background-image: linear-gradient(var(--primary-color), white, white, rgba(46, 32, 46, 0.596), rgba(46, 32, 46, 0.596));
   color: black;
   height: 100%;
 }
@@ -38,12 +38,15 @@ body {
   background-color: rgb(34, 15, 34);
   align-items: center;
 }
+.nav-container img.harmburger {
+  display: none;
+}
 .nav-container .logo {
   width: 6em;
   height: 35px;
   background-image: url("../images/blue.png");
   background-size: contain;
-  border-radius: 0.8em;
+  border-radius: 2em;
   background-position: bottom;
   display: flex;
   align-items: center;
@@ -122,6 +125,9 @@ section.land-section .descrip .text-descrip {
   justify-content: center;
   gap: 3rem;
 }
+section.land-section .descrip .text-descrip img {
+  display: none;
+}
 section.land-section .descrip p {
   color: rgba(191, 218, 245, 0.63);
   padding-top: 0.2em;
@@ -130,7 +136,7 @@ section.land-section .descrip p {
   letter-spacing: -0.1em;
   text-transform: capitalize;
 }
-section.land-section .descrip h1 {
+section.land-section .descrip h3 {
   font-family: "Times New Roman", Times, serif;
   font-family: Impact;
   text-transform: capitalize;
@@ -144,6 +150,7 @@ section.land-section .image-cont {
   background-color: rgb(163, 153, 153);
   width: 20%;
   border-radius: 1.2em;
+  background-image: url("../images/my-pic.jpg");
   background-size: cover;
 }
 
@@ -213,7 +220,7 @@ section.land-section .image-cont {
 }
 
 section.footer {
-  padding: 1em;
+  padding: 0.5em;
   background-color: rgb(34, 15, 34);
   border-top: 2px solid rgba(191, 218, 245, 0.63);
   border-top-left-radius: 1.5em;
@@ -227,4 +234,68 @@ section.footer .foot-cont {
   font-family: cursive;
   font-size: 2rem;
   color: rgba(191, 218, 245, 0.63);
+}
+
+@media only screen and (max-width: 800px) {
+  .nav-container {
+    width: auto;
+    height: auto;
+  }
+  .nav-container nav {
+    display: none;
+  }
+  .nav-container img.harmburger {
+    display: inline-block;
+    padding: 0.5em;
+    background-color: rgb(163, 153, 153);
+  }
+  main img.port {
+    display: none;
+  }
+  main .image-cont {
+    display: none;
+  }
+  main .descrip {
+    padding: 0em;
+  }
+  main .text-descrip {
+    display: flex;
+    flex-direction: column;
+  }
+  main .text-descrip p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  main .text-descrip img {
+    display: inline-block !important;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    padding-top: 0.5em;
+  }
+  main .text-descrip section.land-section {
+    padding: 0em;
+  }
+  main .text-descrip h3 {
+    text-align: center;
+    padding-top: 1em;
+  }
+  main .text-descrip p:last-child {
+    display: none;
+  }
+  section.down-sect {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin-top: 0em;
+  }
+  section.down-sect .dots {
+    display: none;
+  }
+  section.down-sect .skill-cont {
+    margin-bottom: 1em;
+  }
 }/*# sourceMappingURL=main.css.map */
